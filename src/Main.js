@@ -28,7 +28,7 @@ function Main(props) {
 	// Props for Birthday Data
 	const { infoData } = props;
 
-	const [value, setValue] = React.useState("");
+	const [value, setValue] = useState("");
 
 	const handleChange = (event) => {
 		setValue(event.target.value);

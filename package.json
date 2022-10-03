@@ -1,7 +1,7 @@
 {
 	"name": "reactjs",
 	"version": "0.1.0",
-	"homepage": "https://Siddhanta19.github.io/React-Built-Websites",
+	"homepage": "https://Siddhanta19.github.io/React-Birthday-Website/",
 	"private": true,
 	"dependencies": {
 		"@emotion/react": "^11.10.4",

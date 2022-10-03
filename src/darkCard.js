@@ -21,6 +21,7 @@ function DarkCard(props) {
 				muted={true}
 				autoPlay={true}
 				loop
+				poster={character.poster}
 				// srcSet={`${imageSmall} 320w, ${imageMedium} 680w, ${imageLarge}   960w, ${imageXLarge} 1980w`}
 				alt=""
 				className={

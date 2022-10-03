@@ -1,13 +1,22 @@
 // importing images
 
 import yorForger from "../assets/Spy Family/yorDark.mp4";
+import yorPoster from "../assets/Spy Family/yor.jpg"
 // import anyaForger from "./assets/Spy Family/anya.jpg";
 import loidForger from "../assets/Spy Family/loidDark.mp4";
+import loidPoster from "../assets/Spy Family/loidDark.jpg";
+
 import echidna from "../assets/Re;0/echidnaDark.mp4";
+import echidnaPoster from "../assets/Re;0/echidna.webp";
+
 import subaru from "../assets/Re;0/subaruDark.mp4";
+import subaruPoster from "../assets/Re;0/subaru.jpg";
+
 import rem from "../assets/Re;0/remDark.mp4";
+import remPoster from "../assets/Re;0/remDark_Moment.jpg";
 
 import okarin from "../assets/Steins;Gate/okarinDark.mp4";
+import okarinPoster from "../assets/Steins;Gate/okarinDark_Moment.jpg";
 
 function darkCharacters() {
 	const charactersArr = [
@@ -17,6 +26,7 @@ function darkCharacters() {
 			id: "echidna",
 			url: echidna,
 			tagLine: "Witch of Greed",
+			poster: echidnaPoster,
 			// photo edit properties
 			color: "text-slate-300",
 			brightness: "brightness-120 ",
@@ -29,6 +39,7 @@ function darkCharacters() {
 			id: "yor",
 			url: yorForger,
 			tagLine: "Thorn Princess",
+			poster: yorPoster,
 			// photo edit properties
 			color: "text-red-600",
 			// brightness: "brightness-125 ",
@@ -47,6 +58,7 @@ function darkCharacters() {
 			id: "loid",
 			url: loidForger,
 			tagLine: "Twilight",
+			poster: loidPoster,
 			// photo edit properties
 			color: "text-green-400",
 			// brightness: "brightness-95 ",
@@ -59,6 +71,7 @@ function darkCharacters() {
 			id: "subaru",
 			url: subaru,
 			tagLine: "Suffaru",
+			poster: subaruPoster,
 			// photo edit properties
 			color: "text-orange-400",
 			// brightness: "brightness-90 ",
@@ -68,6 +81,7 @@ function darkCharacters() {
 			id: "rem",
 			url: rem,
 			tagLine: "Demonically Inspired",
+			poster: remPoster,
 			// photo edit properties
 			color: "text-cyan-300",
 			brightness: "brightness-125 ",
@@ -77,6 +91,7 @@ function darkCharacters() {
 			id: "okarin",
 			url: okarin,
 			tagLine: "Mad Scientist",
+			poster: okarinPoster,
 			// photo edit properties
 			color: "text-green-400",
 			brightness: "brightness-100 ",
