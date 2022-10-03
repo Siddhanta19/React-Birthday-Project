@@ -5,8 +5,6 @@ import Main from "./Main";
 
 import reportWebVitals from "./reportWebVitals";
 
-
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 /* const showBrowserWidth = () => {
@@ -22,17 +20,15 @@ window.onresize = showBrowserWidth; */
 
 const info = {
 	birthdayPic: "url",
-	codeName: "Soumojit",
-	tagLine: `I just keep moving forward until my dreams become ${"reality".toUpperCase()}`,
+	codeName: "Subhranil",
+	// tagLine: `I just keep moving forward until my dreams become ${"reality".toUpperCase()}`,
+	tagLine: `Mind in AWE → BLUE-TOOTH`,
 };
 
 root.render(
 	<React.StrictMode>
 		{
-			<div
-				id="global-container"
-				className="relative h-[100rem] bg-zinc-800 p-5 space-y-6"
-			>
+			<div id="global-container" className="h-full bg-zinc-800 p-5 space-y-6">
 				<Main infoData={info} />
 				{/* <DarkCard orihimeData={orihimes} /> */}
 			</div>

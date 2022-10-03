@@ -1,15 +1,27 @@
 import React from "react";
+import { useSpring, animated } from "@react-spring/web";
 
 function LightCard(props) {
 	const charactersData = props.charactersData;
+
+	const opacityAnimation = useSpring({
+		to: { opacity: 1 },
+		from: { opacity: 0 },
+		// config: {duration: "1500"}
+	});
+
 	const charactersComponents = charactersData.map((character) => (
 		<div
 			key={character.id}
 			id="character-cards"
-			className="bg-cyan-200 rounded-3xl shadow-md transition-all duration-500"
+			className="flex flex-col justify-center items-center bg-purple-600 shadow-purple-700 rounded-3xl shadow-md transition-all duration-500"
 		>
-			<img
+			<video
 				src={character.url}
+				muted={true}
+				autoPlay={true}
+				loop
+				// srcSet={`${imageSmall} 320w, ${imageMedium} 680w, ${imageLarge}   960w, ${imageXLarge} 1980w`}
 				alt=""
 				className={
 					"rounded-t-2xl duration-300 " +
@@ -20,7 +32,7 @@ function LightCard(props) {
 
 			<h2
 				className={
-					"text-3xl text-center capitalize tracking-widest font-bold underline underline-offset-4 p-5 " +
+					"text-3xl text-center capitalize tracking-widest font-bold pt-5 " +
 					character.color
 				}
 			>
@@ -30,12 +42,13 @@ function LightCard(props) {
 		</div>
 	));
 	return (
-		<div
+		<animated.div
 			id="LightCard"
-			className="flex flex-col bg-yellow-200 justify-center items-center p-10 space-y-5 rounded-3xl shadow-zinc-800 shadow-lg"
+			style={opacityAnimation}
+			className="flex flex-col bg-cyan-500 justify-center items-center p-5 sm:p-10 space-y-8 rounded-3xl shadow-cyan-600 shadow-lg duration-700"
 		>
 			{charactersComponents}
-		</div>
+		</animated.div>
 	);
 }
 
