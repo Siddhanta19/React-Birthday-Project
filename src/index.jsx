@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
 import "./css/style.css";
 import Main from "./Main";
 
@@ -18,21 +19,20 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 window.onload = showBrowserWidth;
 window.onresize = showBrowserWidth; */
 
-const info = {
-	birthdayPic: "url",
+const birthdayInfo = {
 	codeName: "Subhranil",
 	// tagLine: `I just keep moving forward until my dreams become ${"reality".toUpperCase()}`,
-	tagLine: `Mind in AWE → BLUE-TOOTH`,
+	tagLine: `I can, I will & I must be EINSTEIN`,
 };
 
 root.render(
 	<React.StrictMode>
 		{
-			<div id="global-container" className="h-full bg-zinc-800 p-5 space-y-6">
-				<Main infoData={info} />
-				{/* <DarkCard orihimeData={orihimes} /> */}
-			</div>
-			/* Top Section */
+
+				<div id="global-container" className="h-full bg-zinc-800 p-5 space-y-6">
+					<Main infoData={birthdayInfo} />
+				</div>
+
 		}
 	</React.StrictMode>
 );

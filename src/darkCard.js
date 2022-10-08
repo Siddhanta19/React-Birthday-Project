@@ -9,49 +9,57 @@ function DarkCard(props) {
 		from: { opacity: 0 },
 		// config: {duration: "1500"}
 	});
-	const charactersComponents = charactersData.map((character) => (
-		<div
-			key={character.id}
-			id="character-cards"
-			style={opacityAnimation}
-			className="flex flex-col items-center justify-center bg-zinc-800 rounded-3xl shadow-md transition-all"
-		>
-			<video
-				src={character.url}
-				muted={true}
-				autoPlay={true}
-				loop
-				poster={character.poster}
+	const charactersComponents = charactersData.map((character) => {
+		const {
+			id: name,
+			url: video,
+			poster,
+			brightness,
+			contrast,
+			color,
+			tagLine: codeName,
+		} = character;
+
+		return (
+			<div
+				key={name}
+				id="character-cards"
+				style={opacityAnimation}
+				className="flex flex-col items-center justify-center bg-zinc-800 rounded-3xl shadow-md transition-all"
+			>
+				<video
+					src={video}
+					muted={true}
+					autoPlay={true}
+					loop
+					poster={poster}
+					// srcSet={`${imageSmall} 320w, ${imageMedium} 680w, ${imageLarge}   960w, ${imageXLarge} 1980w`}
+					alt=""
+					className={"rounded-t-2xl duration-300 " + brightness + contrast}
+				/>
+				{/* <img
+				src={url}
 				// srcSet={`${imageSmall} 320w, ${imageMedium} 680w, ${imageLarge}   960w, ${imageXLarge} 1980w`}
 				alt=""
 				className={
 					"rounded-t-2xl duration-300 " +
-					character.brightness +
-					character.contrast
-				}
-			/>
-			{/* <img
-				src={character.url}
-				// srcSet={`${imageSmall} 320w, ${imageMedium} 680w, ${imageLarge}   960w, ${imageXLarge} 1980w`}
-				alt=""
-				className={
-					"rounded-t-2xl duration-300 " +
-					character.brightness +
-					character.contrast
+					brightness +
+					contrast
 				}
 			/> */}
 
-			<h2
-				className={
-					"text-4xl capitalize tracking-widest text-center font-bold pt-5 " +
-					character.color
-				}
-			>
-				{character.tagLine}
-			</h2>
-			<br />
-		</div>
-	));
+				<h2
+					className={
+						"text-4xl capitalize tracking-widest text-center font-Poppins font-semibold pt-5 " +
+						color
+					}
+				>
+					{codeName}
+				</h2>
+				<br />
+			</div>
+		);
+	});
 	return (
 		<animated.div
 			style={opacityAnimation}

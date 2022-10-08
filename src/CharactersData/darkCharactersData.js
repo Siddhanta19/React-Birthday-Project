@@ -41,7 +41,7 @@ function darkCharacters() {
 			tagLine: "Thorn Princess",
 			poster: yorPoster,
 			// photo edit properties
-			color: "text-red-600",
+			color: "text-red-400",
 			// brightness: "brightness-125 ",
 		},
 

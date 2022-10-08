@@ -10,37 +10,46 @@ function LightCard(props) {
 		// config: {duration: "1500"}
 	});
 
-	const charactersComponents = charactersData.map((character) => (
-		<div
-			key={character.id}
-			id="character-cards"
-			className="flex flex-col justify-center items-center bg-purple-600 shadow-purple-700 rounded-3xl shadow-md transition-all duration-500"
-		>
-			<video
-				src={character.url}
-				muted={true}
-				autoPlay={true}
-				loop
-				// srcSet={`${imageSmall} 320w, ${imageMedium} 680w, ${imageLarge}   960w, ${imageXLarge} 1980w`}
-				alt=""
-				className={
-					"rounded-t-2xl duration-300 " +
-					character.brightness +
-					character.contrast
-				}
-			/>
+	const charactersComponents = charactersData.map((character) => {
+		const {
+			id: name,
+			url: video,
+			poster,
+			brightness,
+			contrast,
+			color,
+			tagLine: codeName,
+		} = character;
 
-			<h2
-				className={
-					"text-3xl text-center capitalize tracking-widest font-bold pt-5 " +
-					character.color
-				}
+		return (
+			<div
+				key={name}
+				id="character-cards"
+				className="flex flex-col justify-center items-center bg-purple-700 shadow-purple-700 rounded-3xl shadow-md transition-all duration-500"
 			>
-				{character.tagLine}
-			</h2>
-			<br />
-		</div>
-	));
+				<video
+					src={video}
+					muted={true}
+					autoPlay={true}
+					loop
+					poster={poster}
+					// srcSet={`${imageSmall} 320w, ${imageMedium} 680w, ${imageLarge}   960w, ${imageXLarge} 1980w`}
+					alt=""
+					className={"rounded-t-2xl duration-300 " + brightness + contrast}
+				/>
+
+				<h2
+					className={
+						"text-3xl text-center capitalize tracking-widest font-Poppins font-semibold pt-5 " +
+						color
+					}
+				>
+					{codeName}
+				</h2>
+				<br />
+			</div>
+		);
+	});
 	return (
 		<animated.div
 			id="LightCard"

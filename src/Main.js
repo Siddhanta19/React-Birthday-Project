@@ -1,8 +1,8 @@
 // importing React
 import React, { useState } from "react";
 // importing darkCard.js & lightCard.js component
-import DarkCard from "./darkCard";
-import LightCard from "./lightCard";
+import DarkCard from "./DarkCard";
+import LightCard from "./LightCard";
 // image imports
 import birthdayBoy from "./assets/Subhranil.jpg";
 
@@ -42,9 +42,10 @@ function Main(props) {
 
 	return (
 		<>
-			<div
+			<animated.div
 				id="topWish"
-				className="relative flex flex-col bg-purple-700 justify-center items-center p-5 sm:p-10 space-y-5 rounded-3xl shadow-purple-900 shadow-md"
+				style={opacityAnimation}
+				className="relative flex flex-col bg-purple-700 justify-center items-center p-5 sm:p-10 space-y-5 rounded-3xl shadow-purple-900 shadow-md duration-700"
 			>
 				{/* <h1 className="screen font-bold tracking-wider text-white"></h1> */}
 
@@ -57,7 +58,7 @@ function Main(props) {
 
 				<animated.h1
 					// style={opacityAnimation}
-					className="text-white text-center text-4xl sm:text-5xl tracking-widest font-semibold capitalize"
+					className="text-white text-center text-4xl sm:text-5xl tracking-widest font-Ubuntu font-bold capitalize"
 				>
 					Happy Birthday
 				</animated.h1>
@@ -99,7 +100,7 @@ function Main(props) {
 								/>
 							}
 							label={
-								<span className="text-black text-2xl sm:text-4xl font-bold tracking-wider">
+								<span className="text-black text-2xl sm:text-4xl font-Poppins tracking-wider">
 									Dark Mode
 								</span>
 							}
@@ -128,7 +129,7 @@ function Main(props) {
 						/>
 					</RadioGroup>
 				</FormControl>
-			</div>
+			</animated.div>
 			{/* Rendering Dark Card below the purple card */}
 			{value === "Dark Mode" && (
 				<>
