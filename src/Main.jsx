@@ -1,38 +1,31 @@
 // importing React
 import React, { useState } from "react";
-// importing darkCard.js & lightCard.js component
-import DarkCard from "./DarkCard";
-import LightCard from "./LightCard";
+import { Divider } from "@chakra-ui/react";
+
 // image imports
 import birthdayBoy from "./assets/Subhranil.jpg";
+
+import GiftCard from "./GiftCard";
 
 // importing animation
 import { useSpring, animated } from "@react-spring/web";
 
 // importing radio button components
-import Radio from "@mui/material/Radio";
+/* import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import { grey } from "@mui/material/colors";
-
-// importing characters component with data
-import darkCharacters from "./CharactersData/darkCharactersData";
-import lightCharacters from "./CharactersData/lightCharactersData";
-
-// importing music
-import lightMusic from "./Music/If I were a bird.mp3";
-import darkMusic from "./Music/Death.mp3";
+import { grey } from "@mui/material/colors"; */
 
 function Main(props) {
 	// Props for Birthday Data
 	const { infoData } = props;
 
-	const [value, setValue] = useState("");
+	/* const [value, setValue] = useState("");
 
 	const handleChange = (event) => {
 		setValue(event.target.value);
-	};
+	}; */
 
 	const opacityAnimation = useSpring({
 		to: { opacity: 1 },
@@ -63,19 +56,22 @@ function Main(props) {
 					Happy Birthday
 				</animated.h1>
 
+				<Divider />
+
 				<div id="tagline" className="rounded-3xl transition-all duration-500">
-					<h2 className="text-cyan-100 text-2xl sm:text-3xl text-center tracking-wide capitalize md:tracking-wider font-semibold">
-						{infoData.tagLine}
+					<h2 className="text-cyan-100 text-2xl sm:text-3xl text-center tracking-wide md:tracking-wider font-semibold">
+						I can, I shall and I must because, I am The
+						<span className="font-bold"> EINSTEIN</span>
 					</h2>
 				</div>
 
-				<div id="divide" className="bg-purple-400 w-full h-1"></div>
+				<Divider />
 
 				{/* <p className="text-white text-xl font-medium tracking-wide capitalize">
 				 /* : */}
 
 				{/* Radio Button */}
-				<FormControl>
+				{/* <FormControl>
 					<RadioGroup
 						row
 						aria-labelledby="demo-controlled-radio-buttons-group"
@@ -128,10 +124,11 @@ function Main(props) {
 							}
 						/>
 					</RadioGroup>
-				</FormControl>
+				</FormControl> */}
 			</animated.div>
+			<GiftCard />
 			{/* Rendering Dark Card below the purple card */}
-			{value === "Dark Mode" && (
+			{/* {value === "Dark Mode" && (
 				<>
 					<audio src={darkMusic} autoPlay></audio>
 					<DarkCard charactersData={darkCharacters()} />
@@ -142,7 +139,7 @@ function Main(props) {
 					<audio src={lightMusic} autoPlay></audio>
 					<LightCard charactersData={lightCharacters()} />
 				</>
-			)}
+			)} */}
 		</>
 	);
 }

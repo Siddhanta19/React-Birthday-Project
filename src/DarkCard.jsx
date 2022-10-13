@@ -2,7 +2,7 @@ import React from "react";
 import { useSpring, animated } from "@react-spring/web";
 
 function DarkCard(props) {
-	const charactersData = props.charactersData;
+	const { charactersData } = props;
 
 	const opacityAnimation = useSpring({
 		to: { opacity: 1 },
@@ -48,15 +48,16 @@ function DarkCard(props) {
 				}
 			/> */}
 
-				<h2
-					className={
-						"text-4xl capitalize tracking-widest text-center font-Poppins font-semibold pt-5 " +
-						color
-					}
-				>
-					{codeName}
-				</h2>
-				<br />
+				<div className="flex items-center justify-center">
+					<h2
+						className={
+							"text-4xl capitalize tracking-widest text-center font-Poppins font-semibold py-5 " +
+							color
+						}
+					>
+						{codeName}
+					</h2>
+				</div>
 			</div>
 		);
 	});

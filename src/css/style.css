@@ -563,16 +563,12 @@ video {
   display: flex;
 }
 
-.h-full{
-  height: 100%;
+.min-h-screen{
+  min-height: 100vh;
 }
 
-.h-1{
-  height: 0.25rem;
-}
-
-.w-full{
-  width: 100%;
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .flex-col{
@@ -609,8 +605,20 @@ video {
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
+.self-center{
+  align-self: center;
+}
+
+.justify-self-center{
+  justify-self: center;
+}
+
 .rounded-3xl{
   border-radius: 1.5rem;
+}
+
+.rounded-xl{
+  border-radius: 0.75rem;
 }
 
 .rounded-2xl{
@@ -642,13 +650,23 @@ video {
   background-color: rgb(6 182 212 / var(--tw-bg-opacity));
 }
 
-.bg-purple-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(192 132 252 / var(--tw-bg-opacity));
-}
-
 .p-5{
   padding: 1.25rem;
+}
+
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pt-5{
@@ -659,20 +677,12 @@ video {
   text-align: center;
 }
 
-.font-Ubuntu{
-  font-family: Ubuntu, sans-serif;
-}
-
 .font-Poppins{
   font-family: Poppins, sans-serif;
 }
 
-.font-mono{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-.font-sans{
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.font-Ubuntu{
+  font-family: Ubuntu, sans-serif;
 }
 
 .text-4xl{
@@ -695,20 +705,16 @@ video {
   line-height: 1.75rem;
 }
 
-.font-bold{
-  font-weight: 700;
-}
-
 .font-semibold{
   font-weight: 600;
 }
 
-.font-medium{
-  font-weight: 500;
+.font-bold{
+  font-weight: 700;
 }
 
-.font-extrabold{
-  font-weight: 800;
+.font-medium{
+  font-weight: 500;
 }
 
 .capitalize{
@@ -727,14 +733,14 @@ video {
   letter-spacing: 0.025em;
 }
 
-.text-white{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-cyan-100{
   --tw-text-opacity: 1;
   color: rgb(207 250 254 / var(--tw-text-opacity));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-black{

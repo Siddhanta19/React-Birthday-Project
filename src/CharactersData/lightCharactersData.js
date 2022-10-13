@@ -83,7 +83,7 @@ function lightCharacters() {
 			id: "violet",
 			url: violet,
 			poster: violetPoster,
-			tagLine: "Auto Memory's Doll",
+			tagLine: "Violet Evergarden",
 			// photo edit properties
 			color: "text-orange-300",
 			// brightness: "brightness-90 ",

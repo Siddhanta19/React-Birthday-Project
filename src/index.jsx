@@ -4,6 +4,8 @@ import ReactDOM from "react-dom/client";
 import "./css/style.css";
 import Main from "./Main";
 
+import { ChakraProvider } from "@chakra-ui/react";
+
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -22,18 +24,21 @@ window.onresize = showBrowserWidth; */
 const birthdayInfo = {
 	codeName: "Subhranil",
 	// tagLine: `I just keep moving forward until my dreams become ${"reality".toUpperCase()}`,
-	tagLine: `I can, I will & I must be EINSTEIN`,
+	tagLine: `I can, I shall, I must, because, I am The EINSTEIN`,
 };
 
 root.render(
 	<React.StrictMode>
-		{
-
-				<div id="global-container" className="h-full bg-zinc-800 p-5 space-y-6">
+		<ChakraProvider>
+			{
+				<div
+					id="global-container"
+					className="min-h-screen bg-zinc-800 p-5 space-y-6"
+				>
 					<Main infoData={birthdayInfo} />
 				</div>
-
-		}
+			}
+		</ChakraProvider>
 	</React.StrictMode>
 );
 

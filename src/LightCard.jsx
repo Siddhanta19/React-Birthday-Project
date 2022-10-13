@@ -38,15 +38,16 @@ function LightCard(props) {
 					className={"rounded-t-2xl duration-300 " + brightness + contrast}
 				/>
 
-				<h2
-					className={
-						"text-3xl text-center capitalize tracking-widest font-Poppins font-semibold pt-5 " +
-						color
-					}
-				>
-					{codeName}
-				</h2>
-				<br />
+				<div className="flex items-center justify-center">
+					<h2
+						className={
+							"text-3xl text-center capitalize tracking-widest font-Poppins font-semibold py-5 px-1 " +
+							color
+						}
+					>
+						{codeName}
+					</h2>
+				</div>
 			</div>
 		);
 	});
