@@ -1,7 +1,7 @@
 {
 	"name": "reactjs",
 	"version": "0.1.0",
-	"homepage": "https://Siddhanta19.github.io/React-Birthday-Project/",
+	"homepage": "https://Siddhanta19.github.io/React-Birthday-Project",
 	"private": true,
 	"dependencies": {
 		"@chakra-ui/css-reset": "^2.0.8",

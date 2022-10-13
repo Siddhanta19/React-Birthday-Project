@@ -5,8 +5,6 @@ import {
 	TabPanels,
 	Tab,
 	TabPanel,
-	Divider,
-	Stack,
 	Box,
 } from "@chakra-ui/react";
 
@@ -19,11 +17,8 @@ import DarkCard from "./DarkCard";
 import LightCard from "./LightCard";
 
 // importing music
-import lightMusic from "./Music/If I were a bird.mp3";
+import lightMusic from "./Music/The Voice in My Heart.mp3";
 import darkMusic from "./Music/Death.mp3";
-
-// importing icons
-import dark from "./icons/moon.svg";
 
 function GiftCard() {
 	return (
