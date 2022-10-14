@@ -55,7 +55,7 @@ function LightCard(props) {
 		<animated.div
 			id="LightCard"
 			style={opacityAnimation}
-			className="flex flex-col bg-cyan-500 justify-center items-center p-5 sm:p-10 space-y-8 rounded-3xl shadow-cyan-600 shadow-lg duration-700"
+			className="flex flex-col bg-cyan-500 justify-center items-center p-5 sm:p-10 space-y-36 rounded-3xl shadow-cyan-600 shadow-lg duration-700"
 		>
 			{charactersComponents}
 		</animated.div>

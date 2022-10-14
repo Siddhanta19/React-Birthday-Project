@@ -23,17 +23,7 @@ import lightPoster from "../assets/Death Note/lightDark.jpg";
 
 function darkCharacters() {
 	const charactersArr = [
-		// Re;0
-		{
-			id: "light",
-			url: light,
-			tagLine: "The Kira",
-			poster: lightPoster,
-			// photo edit properties
-			color: "text-slate-300",
-			brightness: "brightness-120 ",
-			contrast: "contrast-100",
-		},
+		// Re;
 
 		{
 			id: "echidna",
@@ -42,6 +32,17 @@ function darkCharacters() {
 			poster: echidnaPoster,
 			// photo edit properties
 			color: "text-slate-300",
+			brightness: "brightness-120 ",
+			contrast: "contrast-100",
+		},
+
+		{
+			id: "light",
+			url: light,
+			tagLine: "The Kira",
+			poster: lightPoster,
+			// photo edit properties
+			color: "text-red-400",
 			brightness: "brightness-120 ",
 			contrast: "contrast-100",
 		},
