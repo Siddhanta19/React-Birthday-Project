@@ -1,7 +1,7 @@
 // importing images
 
 import yorForger from "../assets/Spy Family/yorDark.mp4";
-import yorPoster from "../assets/Spy Family/yor.jpg"
+import yorPoster from "../assets/Spy Family/yor.jpg";
 // import anyaForger from "./assets/Spy Family/anya.jpg";
 import loidForger from "../assets/Spy Family/loidDark.mp4";
 import loidPoster from "../assets/Spy Family/loidDark.jpg";
@@ -18,9 +18,22 @@ import remPoster from "../assets/Re;0/remDark_Moment.jpg";
 import okarin from "../assets/Steins;Gate/okarinDark.mp4";
 import okarinPoster from "../assets/Steins;Gate/okarinDark_Moment.jpg";
 
+import light from "../assets/Death Note/light.mp4";
+import lightPoster from "../assets/Death Note/lightDark.jpg";
+
 function darkCharacters() {
 	const charactersArr = [
 		// Re;0
+		{
+			id: "light",
+			url: light,
+			tagLine: "The Kira",
+			poster: lightPoster,
+			// photo edit properties
+			color: "text-slate-300",
+			brightness: "brightness-120 ",
+			contrast: "contrast-100",
+		},
 
 		{
 			id: "echidna",
