@@ -27,7 +27,7 @@
 		"watch": "tailwindcss -i ./src/input.css -o ./src/css/style.css --watch",
 		"csscompile": "tailwindcss -i ./src/input.css -o ./src/css/style.css",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -b bluetooth -d build "
+		"deploy": "gh-pages -b master-bluetooth-deploy -d build "
 	},
 	"eslintConfig": {
 		"extends": [
